@@ -149,14 +149,22 @@ Aşağıdakileri konsolda gösterim (console.log) işlemi gerçekleştirerek, yu
 (işlev yazmanıza gerek yok) */
 
 //(1) Dizideki ilk fenomen (0. dizin) profil (profile) adı
+const elemanBulmaca = fenomenler[0].profile
+console.log(elemanBulmaca);
+
 
 
 //(2) Dizideki üçüncü fenomenin (2. dizin) takipçi (followers) sayısı
-
+const birElemanDahaBul = fenomenler[2].followers;
+console.log(birElemanDahaBul)
 
 /* Görev 2 (otomatik kontrol testi yapılmayacak):
 (işlev yazmanıza gerek yok)
 Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.
+ 
+ const duzeltme = fenomenler[6].profile = "Justin Bieber";
+ console.log (duzeltme);
+
 
 
 /*  Görev 3:
@@ -164,15 +172,17 @@ Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
 1. İlk parametre olarak fenomenler dizisini alın,
 2. İkinci parametre de ise, dizide istenen feneomene ait indeksi gösteren bir sayıyı alın.
 3. `{indeks}. indekste bulunan fenomen: {profile}` şeklinde sonuç döndürün
-
+ 
 NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
 ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
 
-function indekseGoreFenomen(/*kod*/) {
-  /*kod*/
+function indekseGoreFenomen(fenomenler, altinci) {
+
+  return("6. indekste bulunan fenomen : " + duzeltme );
+  
 }
-
-
+const duzeltme = fenomenler[6].profile = "Justin Bieber";
+console.log("6. indekste bulunan fenomen : " + duzeltme );
 
 /*  Görev 4:
 Aşağıdakileri yapmak için profilListesi'ni kullanın:
@@ -182,10 +192,12 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
 */
 
-function profilListesi(/*kod*/) {
-  /*kod*/
+function profilListesi(paramprofile) {
+  let copy = fenomenler.slice();
+  let yeniListe = copy.profile;
+  return
 }
-
+console.log();
 
 
 /* Görev 5:
@@ -197,10 +209,15 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 5. Ortaya çıkan diziyi döndürün
 
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
-function fenomenSil(/*kod*/) {
-  /*kod*/
-}
 
+function fenomenSil() {
+  let copy = fenomenler.slice();
+  const silinecek = fenomenler[0].posts;
+  delete copy.silinecek;
+  return
+ console.log(copy.silinecek);
+}
+            
 
 
 /* Görev 6:
@@ -220,10 +237,18 @@ Aşağıdakileri yapmak için fenomenEkle'i kullanın:
 
 ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
 
-function fenomenEkle(/*kod*/) {
-  /*kod*/
+function fenomenEkle(fenomenler, number1, profile1, followers1, posts1, platform1) {
+  const newobj = {
+    "number": 6,
+    "profile": "Workintech",
+    "followers": 10000000,
+    "posts": 2022,
+    "platform": "Instagram"
+  };
+  fenomenler.push(newobj);
+  return fenomenler;
 }
-
+console.log ("görev 6 = " + fenomenler );
 
 /* Görev 7:
 Aşağıdakileri yapmak için enFenomenler'yi kullanın:
@@ -233,9 +258,11 @@ Aşağıdakileri yapmak için enFenomenler'yi kullanın:
 ÖRNEK: enFenomenler(fenomenler) çağrıldığında sonuç olarak ["Instagram", "Cristiano Ronaldo", ... "Khabane lame"] dönemelidir
 */
 
-function enFenomenler(/*kod*/) {
-  /*kod*/
+function enFenomenler(fenomenler3) {
+  const filtrele = fenomenler.filter(fenomenler => fenomenler.followers >100000000 );
+  return fenomenler.profile;
 }
+console.log(fenomenler.profile);
 
 
 /* Görev 8:
@@ -247,8 +274,10 @@ Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
 ÖRNEK: fenomenGonderimSayisi(fenomenler, 'Will Smith') çağrıldığında "136" dönmelidir
 */
 
-function fenomenGonderimSayisi(/*kod*/){
-  /*kod*/
+function fenomenGonderimSayisi(fenomenler1, profile1){
+
+  const postSayisi = fenomenler.profile = posts;
+
 }
 
 
